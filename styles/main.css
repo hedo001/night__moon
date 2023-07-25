@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #080828;
+  --sparckle: yellow;
+}
+.sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+.star__1 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  animation-name: sparckle__little;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__2 {
+  position: absolute;
+  top: 70px;
+  right: 40%;
+  animation-name: sparckle__little;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__3 {
+  position: absolute;
+  top: 30px;
+  right: 70%;
+  animation-name: sparckle__little;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__4 {
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+  animation-name: sparckle__little;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+.star__5 {
+  position: absolute;
+  bottom: 30%;
+  animation-name: sparckle__little;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  right: 30%;
+  animation-name: sparckle__little;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+.star__6 {
+  position: absolute;
+  bottom: 30%;
+  right: 60px;
+  animation-name: sparckle__little;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__7 {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  animation-name: sparckle__little;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__8 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  animation-name: sparckle__little;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.star__9 {
+  position: absolute;
+  bottom: 40%;
+  left: 10%;
+  animation-name: sparckle__little;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+.star__10 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  animation-name: sparckle__little;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+.star__little {
+  display: inline;
+  border-left: 10px solid transparent;
+  border-bottom: 25px solid var(--sparckle);
+  border-right: 10px solid transparent;
+  position: relative;
+}
+.star__little::after {
+  content: "";
+  border-left: 11px solid transparent;
+  border-bottom: 25px solid var(--sparckle);
+  border-right: 11px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, 40%) rotate(50deg);
+}
+.star__big {
+  display: inline;
+  border-left: 30px solid transparent;
+  border-bottom: 55px solid var(--sparckle);
+  border-right: 30px solid transparent;
+  position: relative;
+}
+.star__big::after {
+  content: "";
+  border-left: 30px solid transparent;
+  border-bottom: 55px solid var(--sparckle);
+  border-right: 30px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, 20%) rotate(57deg);
+}
+@keyframes sparckle__little {
+  0% {
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.moon__wrp {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: translate(50%, 50%);
+}
+.moon {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: -12px -10px 21px 4px #ffffff3b;
+}
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.moon__face {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: relative;
+  top: 45px;
+  left: 30px;
+}
+.moon__face span {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation-name: blink;
+  animation-duration: 10s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes blink {
+  0% {
+  }
+  50% {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+  }
+  60% {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+  }
+  70% {
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+  }
+  80% {
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+  }
+  90% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.moon__tongue {
+  width: 35px;
+  height: 10px;
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  transform: rotate(5deg);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: red;
+}
+span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.span1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  animation-name: shoot;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-delay: 2.5s;
+}
+.span2 {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  z-index: 20;
+  animation-name: shoot2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-delay: 2s;
+}
+.span3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  animation-name: shoot3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-delay: 1.5s;
+}
+.span4 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  animation-name: shoot4;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-delay: 1s;
+}
+.span5 {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  animation-name: shoot5;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+@keyframes shoot {
+  0% {
+  }
+  50% {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+  }
+
+  100% {
+    position: absolute;
+    bottom: 20%;
+    left: 100%;
+  }
+}
+@keyframes shoot2 {
+  0% {
+  }
+  50% {
+    position: absolute;
+    top: 30%;
+    right: 50%;
+  }
+
+  100% {
+    position: absolute;
+    top: 20%;
+    right: 100%;
+  }
+}
+@keyframes shoot3 {
+  0% {
+  }
+  50% {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+  }
+  100% {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+  }
+}
+@keyframes shoot4 {
+  0% {
+  }
+  50% {
+    position: absolute;
+
+    left: 50%;
+  }
+  100% {
+    position: absolute;
+
+    left: 100%;
+  }
+}
+@keyframes shoot5 {
+  0% {
+  }
+  100% {
+    right: 100%;
+  }
+}
